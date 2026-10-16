@@ -78,10 +78,5 @@ public partial class ScalingProvisionCostProviderResource : AcquisitionCostProvi
         return _scaler.Scale(_baseProvisions.Select(provision => provision.ToProvision()), context.AcquiredAmount);
     }
 
-    IEnumerable<Provision> IAcquisitionCostProvider.GetCost(HubAcquisitionContext context)
-    {
-        throw new System.NotImplementedException();
-    }
-
     #endregion
 }
