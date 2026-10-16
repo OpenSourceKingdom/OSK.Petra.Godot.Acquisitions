@@ -1,6 +1,8 @@
 using Godot;
 using OSK.Petra.Acquisitions.Models;
 using OSK.Petra.Acquisitions.Requirements.Dependency;
+using System;
+using System.Linq;
 
 namespace OSK.Petra.Godot.Acquisitions.Data.Requirements.Dependency;
 

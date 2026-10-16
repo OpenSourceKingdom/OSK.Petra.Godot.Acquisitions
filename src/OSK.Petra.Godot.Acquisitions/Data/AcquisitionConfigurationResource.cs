@@ -5,6 +5,8 @@ using OSK.Petra.Godot.Acquisitions.Data.Holds;
 using OSK.Petra.Godot.Acquisitions.Data.Requirements;
 using OSK.Petra.Godot.Acquisitions.Data.Requirements.Dependency;
 using OSK.Petra.Godot.Primitives.Data.Nullables;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace OSK.Petra.Godot.Acquisitions.Data;
 
@@ -63,7 +65,7 @@ public partial class AcquisitionConfigurationResource: Resource
     /// Sets the parent dependency for this definition resource
     /// </summary>
     /// <param name="parentDefinition">The definition resource that is the parent</param>
-    public void SetParentDependency(AcquisitionDefinitionResource? parentDefinition)
+    public void SetParentDependency(AcquisitionDefinitionResource parentDefinition)
     {
         _parentDefinition = parentDefinition;
     }

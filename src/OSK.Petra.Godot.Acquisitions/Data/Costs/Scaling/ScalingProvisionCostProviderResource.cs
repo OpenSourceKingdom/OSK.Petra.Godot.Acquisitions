@@ -6,6 +6,8 @@ using OSK.Petra.Acquisitions.Ports;
 using OSK.Petra.Godot.Math.Formulas.Data;
 using OSK.Petra.Godot.Provisions.Data;
 using OSK.Petra.Provisions.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace OSK.Petra.Godot.Acquisitions.Data.Costs.Scaling;
 
@@ -74,6 +76,11 @@ public partial class ScalingProvisionCostProviderResource : AcquisitionCostProvi
         }
 
         return _scaler.Scale(_baseProvisions.Select(provision => provision.ToProvision()), context.AcquiredAmount);
+    }
+
+    IEnumerable<Provision> IAcquisitionCostProvider.GetCost(HubAcquisitionContext context)
+    {
+        throw new System.NotImplementedException();
     }
 
     #endregion

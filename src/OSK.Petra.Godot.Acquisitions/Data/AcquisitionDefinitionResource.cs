@@ -1,5 +1,7 @@
 using Godot;
 using OSK.Petra.Acquisitions.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace OSK.Petra.Godot.Acquisitions.Data;
 
@@ -90,7 +92,7 @@ public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefin
 	/// Sets the parent dependency for this definition resource
 	/// </summary>
 	/// <param name="resource">The definition resource that is the parent</param>
-	public void SetParentDependency(AcquisitionDefinitionResource? resource)
+	public void SetParentDependency(AcquisitionDefinitionResource resource)
 	{
 		if (resource == this)
 		{
