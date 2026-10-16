@@ -111,7 +111,7 @@ public partial class AcquisitionConfigurationResource: Resource
     }
 
     private IAcquisitionRequirement BuildRequirement(IEnumerable<AcquisitionRequirementResource> requirementGroup)
-        => requirementGroup.Aggregate((AcquisitionRequirementResource)null, (accumulated, next) => accumulated?.CombineResource(next) ?? accumulated).GetRequirement();
+        => requirementGroup.Aggregate((AcquisitionRequirementResource)null, (accumulated, next) => accumulated?.CombineResource(next) ?? next).GetRequirement();
 
     #endregion
 }

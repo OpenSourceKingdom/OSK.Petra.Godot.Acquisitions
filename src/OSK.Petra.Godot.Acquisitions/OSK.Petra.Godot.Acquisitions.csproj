@@ -12,6 +12,7 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -23,6 +24,7 @@
 		<Compile Update="**\*.cs" Pack="true" PackagePath="godot\%(RecursiveDir)%(Filename)%(Extension)" />
 		<None Include="..\OSK.Petra.Godot.targets" Pack="true" PackagePath="buildTransitive\$(MSBuildProjectName).targets" />
 	</ItemGroup>
+
 	<ItemGroup>
 	  <PackageReference Include="OSK.Extensions.Petra.Math.Provisions" Version="0.3.0" />
 	  <PackageReference Include="OSK.Petra.Acquisitions" Version="0.1.0" />
