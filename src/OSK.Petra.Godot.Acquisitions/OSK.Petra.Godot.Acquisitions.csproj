@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 
-		<Description>Provides an implementation for configuration and related data structures for Acquisition items, tech, tech trees, etc..</Description>
+		<Description>Provides an implementation for configuration and related data structures for Acquisition items, tech, tech trees, etc. for use within Godot</Description>
 		<PackageTags>OpenSourceKingdom, OpenSource, Petra, Game, Framework, Suite, Tool, Tech, Tree, Upgrade, Path, Acquire, Acquisition, Item, Provision, Definition, Godot</PackageTags>
 		<Title>OSK.Petra.Godot.Acquisitions</Title>
 		<Authors>BlankDev117</Authors>
