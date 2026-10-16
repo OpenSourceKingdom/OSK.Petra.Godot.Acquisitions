@@ -3,6 +3,9 @@ using OSK.Petra.Acquisitions.Models;
 
 namespace OSK.Petra.Godot.Acquisitions.Data;
 
+/// <summary>
+/// A configuration file that allows editing and setting acquisition definition data
+/// </summary>
 [GlobalClass]
 [Tool]
 public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefinition
@@ -14,6 +17,9 @@ public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefin
 
 	private AcquisitionDefinitionResource[] _choices;
 
+	/// <summary>
+	/// The main configuration for how the choice can be acquired
+	/// </summary>
 	[Export]
 	private AcquisitionConfigurationResource ConfigurationResource
 	{
@@ -25,6 +31,9 @@ public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefin
 		}
 	}
 
+	/// <summary>
+	/// The actual thing that can be acquired
+	/// </summary>
 	[Export]
 	private AcquireableResource AcquireableResource
 	{
@@ -39,6 +48,9 @@ public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefin
 		}
 	}
 
+	/// <summary>
+	/// The collection of choices that follows this acquisition. Any choice in this collection implies and receives a dependency requirement on this choice
+	/// </summary>
 	[Export]
 	protected AcquisitionDefinitionResource[] NextAcquistionChoices 
 	{ 
@@ -74,7 +86,11 @@ public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefin
 
 	#region Api
 
-	public void SetParentDependency(AcquisitionDefinitionResource resource)
+	/// <summary>
+	/// Sets the parent dependency for this definition resource
+	/// </summary>
+	/// <param name="resource">The definition resource that is the parent</param>
+	public void SetParentDependency(AcquisitionDefinitionResource? resource)
 	{
 		if (resource == this)
 		{
@@ -97,13 +113,17 @@ public partial class AcquisitionDefinitionResource : Resource, IAcquisitionDefin
 
 	#region IAcquisitionDefinition
 
+	/// <inheritdoc/>
 	public AcquisitionChoiceConfiguration Configuration => _configuration.ToChoiceConfiguration();
 
-	public IAcquireable Acquireable => AcquireableResource;
+    /// <inheritdoc/>
+    public IAcquireable Acquireable => AcquireableResource;
 
-	public ICollection<IAcquisitionDefinition> NextChoices => _choices;
+    /// <inheritdoc/>
+    public ICollection<IAcquisitionDefinition> NextChoices => _choices;
 
-	public ICollection<IAcquisitionDefinition> PreviousChoices => _previousDefinitions;
+    /// <inheritdoc/>
+    public ICollection<IAcquisitionDefinition> PreviousChoices => _previousDefinitions;
 
 	#endregion
 }

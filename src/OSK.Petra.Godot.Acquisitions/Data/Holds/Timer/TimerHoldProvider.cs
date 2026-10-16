@@ -6,10 +6,17 @@ using OSK.Petra.Math.Formulas;
 
 namespace OSK.Petra.Godot.Acquisitions.Data.Holds.Timer;
 
-public class TimerHoldProvider(TimeSpan timer, IFormula timeScaleFormula, ScalingMode scalingMode) : IAcquisitionHoldProvider
+/// <summary>
+/// Creates a hold provider that returns timer holds
+/// </summary>
+/// <param name="timer">The initial timer to use</param>
+/// <param name="timeScaleFormula">An optional time scale formula for the timer</param>
+/// <param name="scalingMode">How scaling is applied if a formula is used</param>
+public class TimerHoldProvider(TimeSpan timer, IFormula timeScaleFormula = null, ScalingMode scalingMode = ScalingMode.Replace) : IAcquisitionHoldProvider
 {
     #region IAcquisitionHoldProvider
 
+    /// <inheritdoc/>
     public IAcquisitionHold GetHold(HubAcquisitionContext context)
     {
         var timerSeconds = timer.TotalSeconds;

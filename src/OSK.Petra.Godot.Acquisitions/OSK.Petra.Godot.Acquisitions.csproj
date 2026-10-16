@@ -3,7 +3,6 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
 
 		<Description>Provides an implementation for configuration and related data structures for Acquisition items, tech, tech trees, etc..</Description>
 		<PackageTags>OpenSourceKingdom, OpenSource, Petra, Game, Framework, Suite, Tool, Tech, Tree, Upgrade, Path, Acquire, Acquisition, Item, Provision, Definition, Godot</PackageTags>
@@ -18,8 +17,6 @@
 
 	<ItemGroup>
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
-		<None Include="Data\Holds\Timer\TimerHoldProvider.cs.uid" />
-		<None Include="Data\Holds\Timer\TimerHoldProviderResource.cs.uid" />
 	</ItemGroup>
 
 	<!-- Required Godot injection -->
