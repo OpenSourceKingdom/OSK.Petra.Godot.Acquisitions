@@ -27,7 +27,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="OSK.Extensions.Petra.Math.Provisions" Version="0.3.0" />
-	  <PackageReference Include="OSK.Petra.Acquisitions" Version="0.1.0" />
+	  <PackageReference Include="OSK.Petra.Acquisitions" Version="0.3.0" />
 	  <PackageReference Include="OSK.Petra.Godot.Math.Formulas" Version="0.1.0" />
 	  <PackageReference Include="OSK.Petra.Godot.Primitives" Version="0.3.2" />
 	  <PackageReference Include="OSK.Petra.Godot.Provisions" Version="0.1.0" />
